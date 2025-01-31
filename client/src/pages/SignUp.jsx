@@ -41,6 +41,8 @@ const SignUp = () => {
     } catch (error) {
       setErrorMessage(error.message)
       setLoading(false)
+    }finally{
+      setLoading(false)
     }
   };
   

@@ -2,6 +2,9 @@ import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from "../utils/error.js";
 import jwt from "jsonwebtoken";  
+
+
+// Sign Up Api Route
 export const signup = async (req, res, next) => {
     const { username, email, password } = req.body;
     if(!username || !email || !password || username === "" || email === "" || password === ""){
@@ -24,6 +27,7 @@ export const signup = async (req, res, next) => {
     }
 } 
 
+// Sign In Api Route
 export const signin = async (req, res, next) => {
     const { email, password } = req.body;
     if( !email || !password || email === "" || password === ""){
@@ -51,3 +55,5 @@ export const signin = async (req, res, next) => {
         next(error)
     }
 };
+
+
