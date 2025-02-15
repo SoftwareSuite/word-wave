@@ -9,4 +9,5 @@ postRouter.get('/getposts', getposts)
 postRouter.delete('/deletepost/:postId/:userId', verifyToken, deletePost)
 postRouter.put('/updatepost/:postId/:userId', verifyToken, updatePost)
 
+
 export default postRouter;

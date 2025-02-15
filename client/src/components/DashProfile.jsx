@@ -96,7 +96,7 @@ export default function DashProfile() {
       }
     );
   };
-
+  console.log(imageUploadingError);
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
