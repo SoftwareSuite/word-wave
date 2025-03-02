@@ -1,5 +1,5 @@
 import express from 'express';
-import { createComment, getPostComments, likeComment } from '../controllers/comment.controller.js';
+import { createComment, editComment, getPostComments, likeComment } from '../controllers/comment.controller.js';
 import { verifyToken } from '../utils/verifyUser.js';
 
 const commentRouter = express.Router()
@@ -7,4 +7,5 @@ const commentRouter = express.Router()
 commentRouter.post('/create', verifyToken, createComment)
 commentRouter.get('/getpostcomments/:postId' , getPostComments)
 commentRouter.put('/likecomment/:commentId', verifyToken, likeComment)
+commentRouter.put('/editcomment/:commentId', verifyToken, editComment)
 export default commentRouter
